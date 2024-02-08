@@ -3,12 +3,15 @@ base:
   random_state: 42
   target_col: TARGET
 
+#added source data source 
 data_source:
   s3_source: data_given/winequality.csv
 
+#added raw data source 
 load_data:
   raw_dataset_csv: data/raw/winequality.csv
 
+#adding splitting criteria
 split_data:
   train_path: data/processed/train_winequality.csv
   test_path: data/processed/test_winequality.csv
@@ -23,6 +26,7 @@ estimators:
       l1_ratio: 0.4
 model_dir: saved_models
 
+#adding model reports path
 reports:
   params: report/params.json
   scores: report/scores.json
