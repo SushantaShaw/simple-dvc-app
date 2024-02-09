@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+numpy
+black
+pytest
+dvc
+joblib
+mlflow
+argparse
