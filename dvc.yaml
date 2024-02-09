@@ -23,6 +23,11 @@ stages:
     - data/processed/train_winequality.csv
     - data/processed/test_winequality.csv
     - src/train.py
-    outs:
-    - reports/params.json
-    - reports/score.json
+    params:
+    - estimators.ElasticNet.params.alpha
+    - estimators.ElasticNet.params.l1_ratio
+    metrics:
+    - reports/params.json:
+        cache: False
+    - reports/score.json:
+        cache: False
