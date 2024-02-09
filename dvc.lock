@@ -29,14 +29,38 @@ stages:
       size: 421188
     - path: src/split_data.py
       hash: md5
-      md5: d720f4df86fe26554398d4e571cb6284
-      size: 724
+      md5: a5ac8d76962d0ed8472c1985a6d5ad54
+      size: 796
     outs:
     - path: data/processed/test_winequality.csv
       hash: md5
-      md5: ba150dd754c60e32196a5af30b66364d
-      size: 84381
+      md5: 629bf533870d4ef847a9bd2db0a93424
+      size: 83933
     - path: data/processed/train_winequality.csv
       hash: md5
-      md5: 21fd7a9761623c4786c3701f41bdb231
-      size: 336959
+      md5: d1bb5a963f4b26eb8b5bf1ea79b81597
+      size: 335342
+  train_data:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/test_winequality.csv
+      hash: md5
+      md5: 629bf533870d4ef847a9bd2db0a93424
+      size: 83933
+    - path: data/processed/train_winequality.csv
+      hash: md5
+      md5: d1bb5a963f4b26eb8b5bf1ea79b81597
+      size: 335342
+    - path: src/train.py
+      hash: md5
+      md5: 7baf960a17bb66960dd7d7d09c8c2ba8
+      size: 1718
+    outs:
+    - path: reports/params.json
+      hash: md5
+      md5: 4ea122663a25b963d4fab2d609bce9bc
+      size: 31
+    - path: reports/score.json
+      hash: md5
+      md5: 6c3df2c342acbb8a12c18fb59e2d800f
+      size: 81

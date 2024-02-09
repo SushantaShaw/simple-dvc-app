@@ -16,3 +16,13 @@ stages:
     outs:
     - data/processed/train_winequality.csv
     - data/processed/test_winequality.csv
+
+  train_data:
+    cmd: python src/train.py
+    deps:
+    - data/processed/train_winequality.csv
+    - data/processed/test_winequality.csv
+    - src/train.py
+    outs:
+    - reports/params.json
+    - reports/score.json

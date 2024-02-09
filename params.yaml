@@ -1,7 +1,8 @@
 base:
   project: winequality-project
   random_state: 42
-  target_col: TARGET
+  target_col: quality
+  delete_col : type
 
 #added source data source 
 data_source:
@@ -28,7 +29,7 @@ model_dir: saved_models
 
 #adding model reports path
 reports:
-  params: report/params.json
-  scores: report/scores.json
+  params: reports/params.json
+  scores: reports/score.json
 
 webapp_model_dir: prediction_service/model/model.joblib
