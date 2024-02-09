@@ -6,6 +6,7 @@ from sklearn.linear_model import ElasticNet
 from sklearn.metrics import r2_score,mean_squared_error,mean_absolute_error
 from get_data import read_params
 import json
+import joblib
 
 def evaluation(y_true,y_pred):
     res = dict()
@@ -26,6 +27,7 @@ def train_evaluate():
     param_path = param["reports"]["params"]
     score_path = param["reports"]["scores"]
     columns_del = param["base"]["delete_col"]
+    model_dir = param["webapp_model_dir"]
 
     rem_train_cols = [target] + [columns_del]
 
@@ -46,6 +48,6 @@ def train_evaluate():
     with open(param_path,"w") as f:
         json.dump({"l1_ratio":l1,"alpha":alpha},f)
 
-
+    joblib.dump(lr,model_dir)
 if __name__=="__main__":
     train_evaluate()

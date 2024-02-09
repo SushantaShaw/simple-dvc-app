@@ -53,14 +53,22 @@ stages:
       size: 335342
     - path: src/train.py
       hash: md5
-      md5: 7baf960a17bb66960dd7d7d09c8c2ba8
-      size: 1718
+      md5: a143ff24863b21e6fc19d35f6c26f0f6
+      size: 1805
+    params:
+      params.yaml:
+        estimators.ElasticNet.params.alpha: 0.9
+        estimators.ElasticNet.params.l1_ratio: 0.3
     outs:
+    - path: prediction_service/model/model.joblib
+      hash: md5
+      md5: 442a788d8bc6964c66df5f48d1b8c035
+      size: 1231
     - path: reports/params.json
       hash: md5
-      md5: 4ea122663a25b963d4fab2d609bce9bc
+      md5: fa04139f8e651eeb68c1d0e080d17a59
       size: 31
     - path: reports/score.json
       hash: md5
-      md5: 6c3df2c342acbb8a12c18fb59e2d800f
-      size: 81
+      md5: d99186dad5826ec7aaa5e30a2555aac1
+      size: 80

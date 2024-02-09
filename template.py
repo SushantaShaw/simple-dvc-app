@@ -2,6 +2,7 @@ import os
 dirs = [
     os.path.join("Data","Raw"),
     os.path.join("Data","Processed"),
+    os.path.join("prediction_service","model"),
     "notebooks",
     "saved_mdoels",
     "src",

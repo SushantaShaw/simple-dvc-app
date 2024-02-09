@@ -31,3 +31,5 @@ stages:
         cache: False
     - reports/score.json:
         cache: False
+    outs:
+    - prediction_service/model/model.joblib
