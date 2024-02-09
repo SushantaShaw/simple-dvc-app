@@ -1,7 +1,6 @@
 name: winequality prediction
 
-
-  on:
+on:
   push:
     branches:
     - main
