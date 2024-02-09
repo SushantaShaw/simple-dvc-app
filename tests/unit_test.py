@@ -1,3 +1,3 @@
 def test_generic():
-    a=5
-    assert a==5
+    a = 5
+    assert a == 5
