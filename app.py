@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Load the trained machine learning model
 
 
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["POST"])
 def predict():
     # Get data from the request
     data = request.json
@@ -18,5 +18,6 @@ def predict():
         response = api_response(request.json)
         return jsonify({"prediction": response})
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app.run(debug=True)
