@@ -69,5 +69,7 @@
 # #     res = api_response(data)
 # #     assert res["response"] == prediction_service.prediction.ColumnNotFound().message
 
-# if __name__=="__main__":
-#     test_api_response_correct_range()
+
+def test_generic():
+    a = 5
+    assert a == 5
