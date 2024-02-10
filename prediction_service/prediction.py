@@ -79,9 +79,3 @@ def api_response(data):
             "response": str(e),
         }
         return response
-
-
-if __name__ == "__main__":
-    schema = get_schema()
-    schema.popitem()
-    print(api_response(schema))

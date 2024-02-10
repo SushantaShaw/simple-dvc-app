@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from src.get_data import read_params
 import pandas as pd
-from prediction import api_response
+from prediction_service.prediction import api_response
 
 params = read_params("params.yaml")
 app = Flask(__name__)
