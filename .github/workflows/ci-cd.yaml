@@ -1,4 +1,4 @@
-name: winequality prediction
+name: winequality prediction v1
 
 on:
   push:
